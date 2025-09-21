@@ -6,7 +6,11 @@ public class Aluno extends Pessoa {
         this.notas = notas;
     }
 
-    double[] getNotas() {
+    public double[] getNotas() {
         return this.notas;
+    }
+
+    interface Avaliavel {
+        void calcularNotaFinal();
     }
 }
