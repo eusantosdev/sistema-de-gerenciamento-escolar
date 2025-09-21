@@ -7,7 +7,7 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    String getName() {
+    public String getName() {
         return this.nome;
     }
 }
