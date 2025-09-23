@@ -1,16 +1,24 @@
-public class Aluno extends Pessoa {
-    private double[] notas;
+import java.util.ArrayList;
 
-    public Aluno(String nome, int idade, double[] notas) {
+public class Aluno extends Pessoa implements Avaliavel {
+
+    private ArrayList<Double> notas;
+
+    public Aluno(String nome, int idade, ArrayList<Double> notas) {
         super(nome, idade);
         this.notas = notas;
     }
 
-    public double[] getNotas() {
-        return this.notas;
+    public ArrayList<Double> getNotas() {
+        return notas;
     }
 
-    interface Avaliavel {
-        void calcularNotaFinal();
-    }
+    @Override
+    public double calcularNotaFinal() {
+        double soma = 0;
+        for (double nota: notas) {
+            soma += nota;
+        }
+        return soma / notas.size();
+    };
 }
