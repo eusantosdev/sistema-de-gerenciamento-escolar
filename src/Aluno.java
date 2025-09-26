@@ -19,6 +19,7 @@ public class Aluno extends Pessoa implements Avaliavel {
         for (double nota: notas) {
             soma += nota;
         }
-        return soma / notas.size();
-    };
+
+        return notas.isEmpty() ? 0 : soma / notas.size();
+    }
 }
