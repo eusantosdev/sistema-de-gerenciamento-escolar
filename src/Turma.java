@@ -14,7 +14,7 @@ public class Turma implements Avaliavel {
         alunos.add(aluno);
     }
 
-    public double calcularMedia() {
+    private double calcularMedia() {
         double somaTurma = 0;
         int quantidadeTurma = 0;
 
@@ -39,7 +39,7 @@ public class Turma implements Avaliavel {
             double mediaAluno = aluno.calcularNotaFinal();
 
             if (mediaAluno >= mediaTurma) {
-                System.out.println(aluno.getName());
+                System.out.println("-" + aluno.getName());
             }
         }
     }
